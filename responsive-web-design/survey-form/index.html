@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/jpg" href="./favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <title>COVID-19 Post-Infection Survey</title>
+  </head>
+  <body>
+    <!-- Page header --> 
+    <header class="header">
+      <h1 id="title" class="header__title">COVID-19 Post Infection Survey</h1>
+      <p id="description" class="header__description">A quick survey on attitudes for those who infected and recovered from COVID-19</p>
+      <br><span class="header__description--required">* Required</span>
+    </header>
+
+    <!-- Survey -->
+    <form action="" id="survey-form">
+      <!-- <section class="user-labels"> -->
+        <!-- Name -->
+        <section class="form__section">
+          <label for="name" id="name-label" class="required-field">Name</label>
+          <input type="text" class="text-input" id="name" placeholder="Ex. John Doe" required autofocus/>
+        </section>
+        
+
+        <!-- Email -->
+        <section class="form__section">
+          <label for="email" id="email-label" class="required-field">Email</label>
+          <input type="email" id="email" class="text-input" placeholder="example@email.com" required/>
+        </section>
+
+        <!-- Age -->
+        <section class="form__section">
+          <label for="number" id="number-label" class="required-field">Age</label>
+          <input type="number" id="number" class="text-input" min="0" max="120" placeholder="Ex. 18" required />
+        </section>
+        
+      <!-- </section> -->
+
+      <!-- Dropdown - Household size -->
+      <section>
+        <label for="dropdown">Please pick your household size:</label>
+        <select id="dropdown">
+          Household Size
+          <option value="alone">Living alone</option>
+          <option value="1">Living with 1 other person</option>
+          <option value="2to3">Living with 2 to 3 people</option>
+          <option value="4to5">Living with 4 to 5 people</option>
+          <option value="6">Living with 5 or more people</option>
+        </select>
+      </section>
+
+
+      <!-- Checkboxes - Symptoms -->
+      <!-- Ouch! DRY principles aren't too easy to follow with vanilla HTML huh -->
+      <section>
+        <label for="symptoms">Check all symptoms you had during your infection:</label>
+        <fieldset id="symptoms" class="fieldset">
+          <label>
+            <input type="checkbox" value="" name="symptoms" />
+            Fever or chills
+          </label>
+
+          <label>
+            <input type="checkbox" value="" name="symptoms" />
+            Cough
+          </label>
+
+          <label>
+            <input type="checkbox" value="" name="symptoms" />
+            Shortness of breath or difficulty breathing
+          </label>
+
+          <label>
+            <input type="checkbox" value="" name="symptoms" />
+            Fatigue
+          </label>
+
+          <label>
+            <input type="checkbox" value="" name="symptoms" />
+            Muscle or body aches
+          </label>
+
+          <label>
+            <input type="checkbox" value="" name="symptoms" />
+            Asymptomatic (None of the above)
+          </label>
+        </fieldset>
+      </section>
+
+      <!-- Radio buttons - Pre-infection -->
+      <section>
+        <label for="pre-infection"> Which best describes your attitude towards COVID-19 and the pandemic before infection?</label>
+          <fieldset id="pre-infection" class="fieldset">
+
+          <label>
+            <input type="radio" value="attitude-1" name="pre-infection" />
+            I supported stay-at-home orders and nonessential business closures,
+            but believed that reopening the economy was more important than
+            safety.
+          </label>
+
+          <label>
+            <input type="radio" value="attitude-2" name="pre-infection" />
+            I continued to live my life the same as before the pandeimc as I did
+            not believe COVID-19 was a threat.
+          </label>
+
+          <label>
+            <input type="radio" value="attitude-3" name="pre-infection" />
+            I followed all COVID-19 health guidelines including always staying 6
+            feet apart and isolating at home as I prioritize safety above
+            economic activity or freedom of movement.
+          </label>
+
+          <label>
+            <input type="radio" value="attitude-4" name="pre-infection" />
+            I followed COVID-19 restrictions at the start of the pandemic but
+            became less strict about mask-wearing and social distancing later
+            on.
+          </label>
+        </fieldset>        
+      </section>
+
+      <!-- Radio buttons - Post infection -->
+
+      <!-- Additional comments -->
+      <section class="comments">
+        <label for="comments">Additional Comments:</label>
+        <textarea name="" id="comments" cols="30" rows="10"></textarea>
+      </section>
+
+      <!-- Submit the form -->
+      <input class="submit-btn" type="submit" value="Submit" />
+
+    </form>
+
+  </body>
+</html>

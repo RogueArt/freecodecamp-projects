@@ -1,0 +1,120 @@
+$default-bg: #FFF;
+$bg-color: #E2EEE0;
+$accent-color: #3C8F2C;
+$muted-color: #dadce0;
+$danger: #d93025;
+
+body {
+  max-width: 40em;
+
+  margin: 1em auto;
+
+  font-family: 'Roboto';
+  
+  background-color: rgba($bg-color, 0.9);
+}
+
+// <========================= INPUTS ============================>
+// <==============================================================>
+fieldset { border: 0; padding-left: 0; }
+input {
+  border: 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input[type="radio"] {
+  color: red;
+  line-height: 3.5;
+}
+
+#name, #email, #number {
+  border-bottom: 1px solid $muted-color;
+  padding-bottom: 2px;
+
+  margin-top: 24px;
+
+  &:focus {
+    border-bottom: 2px solid #3C8F2C;
+    margin-bottom: -1px;
+  }
+}
+
+// HEADER
+.header, #survey-form > section {
+  padding: 1.5em;
+  
+  background-color: $default-bg;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid $muted-color;
+}
+
+.header {
+  border-top: solid 10px $accent-color;
+  justify-content: space-between;
+}
+
+.header__title, .header__description {
+  text-align: left;
+}
+
+.header__title {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-weight: 400;
+}
+
+.header__description {
+  margin: 8px 0;
+  font-style: italic;
+}
+
+.header__description--required {
+  color: $danger;
+  font-size: 14px;
+}
+
+
+// FORM
+#survey-form > section {
+  margin: 1em 0;
+  // max-height: 8.625em;
+  height: auto;
+  
+  // justify-items: stretch;
+  // align-items: center;
+}
+
+label {
+  &:after {
+    content: " *";
+    color: $danger;
+  }
+}
+
+#name, #email { width: 50%; }
+#number { width: 25%; }
+
+.fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+.comments {
+
+  margin-bottom: 10em;
+}
+
+.submit-btn {
+  background-color: $accent-color;
+  color: $default-bg;
+  padding: 8px 24px;
+  border-radius: 4px;
+}
